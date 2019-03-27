@@ -6,8 +6,11 @@
   {{#each burgers}}
     {{#unless devoured}}
    <p>
-{{name}}
+{{name}}<button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
+		EAT ME
+	</button>
    </p>  
+   
     {{/unless}}
   {{/each}}
 </ul>
@@ -17,6 +20,7 @@
 <ul>
   {{#each burgers}}
     {{#if devoured}}
+    <p>{{name}}</p>
       {{!-- {{> burgers/burger-block devoured=false}} --}}
     {{/if}}
   {{/each}}
