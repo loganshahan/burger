@@ -1,32 +1,39 @@
 <h1>Burgers!</h1>
 
-<h2>Undevoured Burgers</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-   <p>
-{{name}}<button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
-		EAT ME
-	</button>
-   </p>  
-   
-    {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>Devoured Burgers</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-    <p>{{name}}</p>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Uneaten Burgers</h2>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+         <p>
+          {{name}}<button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
+		      EAT ME
+	      </button>
+        </p>  
+        {{/unless}}
+        {{/each}}
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2>Eaten Burgers</h2>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          <p>{{name}}</p>
       {{!-- {{> burgers/burger-block devoured=false}} --}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+  <div class="col-md-6">
+    <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -42,3 +49,10 @@
 
   <button type="submit">Add Burger</button>
 </form>
+
+  </div>
+</div>
+  </div>
+</main>
+
+

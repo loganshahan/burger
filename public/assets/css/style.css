@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+#burgerImg{
+    display: block;
+    margin: auto;
+}
+.change-devoured{
+    padding: 3px;
+    margin: 5px;
+}
+body{
+    background-color: orange;
+}
